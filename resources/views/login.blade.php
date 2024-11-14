@@ -10,10 +10,13 @@
 <body>
   <form action="{{ route('login') }}" method="post">
     <h1>Se connecter</h1>
+    @if(session('error'))
+        <span>{{ session('error') }}</span>
+    @endif
     @csrf
     <div class="inputs">
-      <input type="text" placeholder="Nom d'utilisateur" />
-      <input type="password" placeholder="Mot de passe">
+      <input type="text" name="username" placeholder="Nom d'utilisateur" />
+      <input type="password" name="password" placeholder="Mot de passe">
     </div>
     
     <div align="center">
