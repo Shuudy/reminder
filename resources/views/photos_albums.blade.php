@@ -11,26 +11,15 @@
 <body>
     <form>
         <h1>Liste des photos de l'album</h1> 
+
+        @foreach($album->photos as $photo)
         <div class="gallery">
             <a target="_blank" href="images/salad.jpg">
-                <img src="images/salad.jpg" alt="salad">
+                <img src="https://picsum.photos/id/{{ $photo->id }}/367/267" alt="salad">
             </a>
-            <div class="description">Salads</div>
+            <div class="description">{{ $photo->title }}</div>
         </div>
-
-        <div class="gallery">
-            <a target="_blank" href="images/soup.jpg">
-                <img src="images/soup.jpg" alt="soup">
-            </a>
-            <div class="description">Soups</div>
-        </div>
-
-        <div class="gallery">
-            <a target="_blank" href="images/pizza.jpg">
-                <img src="images/pizza.jpg" alt="pizza">
-            </a>
-            <div class="description">Pizzas</div>
-        </div>
+        @endforeach
     </form>
 </body>
 
