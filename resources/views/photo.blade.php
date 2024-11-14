@@ -10,16 +10,14 @@
 
 <body>
     <form>
-        <h1>Liste des photos de l'album</h1> 
-
-        @foreach($album->photos as $photo)
+        <h1>Photo</h1> 
+        
         <div class="gallery">
-            <a target="_blank" href="{{ route('photos.show', $photo->id) }}">
+            <a target="_blank" href="images/salad.jpg">
                 <img src="https://picsum.photos/id/{{ $photo->id }}/367/267" alt="salad">
             </a>
             <div class="description">{{ $photo->title }}</div>
         </div>
-        @endforeach
     </form>
 </body>
 

@@ -12,3 +12,4 @@ Route::get('/albums', function () {
 });
 
 Route::get('/albums/{album}', [PhotoController::class, 'index'])->name('photos');
+Route::get('/photo/{photo}', [PhotoController::class, 'show'])->name('photos.show');
