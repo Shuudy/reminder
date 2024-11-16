@@ -19,7 +19,7 @@
       <input type="password" name="password" placeholder="Mot de passe">
     </div>
     
-    <div align="center">
+    <div>
       <button type="submit">Se connecter</button>
     </div>
   </form>
